@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {formatTime} from '../utils/helpers';
+
 export default ({selectedTalk, talk, onTalkClick}) => (
   <div
     className={
@@ -8,7 +10,7 @@ export default ({selectedTalk, talk, onTalkClick}) => (
     onClick={() => onTalkClick(talk)}
   >
     <div>{talk.title}</div>
-    <div>{talk.location}, {talk.time.start}-{talk.time.end}</div>
+    <div>{talk.location}, {formatTime(talk.time.start)}-{formatTime(talk.time.end)}</div>
     <div>{talk.date}</div>
   </div>
 );

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {talkId} from '../utils/helpers';
 import TalkItem from './TalkItem';
 
 export default ({talks, selectedTalk, favorites, onTalkClick}) => (
@@ -7,7 +8,7 @@ export default ({talks, selectedTalk, favorites, onTalkClick}) => (
     <ul>
       {
         talks.map((talk) => (
-          <li key={talk.id}>
+          <li key={talkId(talk)}>
             <TalkItem talk={talk} selectedTalk={selectedTalk} onTalkClick={onTalkClick} />
           </li>
         ))

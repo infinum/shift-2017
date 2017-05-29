@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {talkFavToggle, talkSelect, filterChange} from './actions';
+import {selectedTalk, favorites, listTalks} from './selectors';
 import {talkId} from './utils/helpers';
 
 import TalkList from './components/TalkList';
@@ -23,17 +24,13 @@ class App extends Component {
   }
 
   render() {
-    const {loading, talks, filter} = this.props;
+    const {loading, talks, filter, selectedTalk, favorites, list} = this.props;
 
     if (loading) {
       return <div className="message">Loading...</div>;
     } else if (!talks) {
       return <div className="message">Something is wrong :(</div>;
     }
-
-    const list = []; // Filtered talks
-    const favorites = []; // Favorited talks
-    const selectedTalk = null; // Selected talk ovject
 
     return (
       <div className="main">
@@ -58,7 +55,10 @@ function mapStateToProps(state) {
   return {
     loading: state.loading,
     talks: state.talks,
-    filter: state.filter
+    filter: state.filter,
+    selectedTalk: selectedTalk(state, state.selectedTalk),
+    favorites: favorites(state),
+    list: listTalks(state, state.filter)
   };
 }
 
