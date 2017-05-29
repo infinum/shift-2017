@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import TalkList from './components/TalkList';
 import Talk from './components/Talk';
@@ -18,11 +19,11 @@ class App extends Component {
   }
 
   render() {
-    const {store} = this.props;
+    const {loading, talks, filter} = this.props;
 
-    if (store.loading) {
+    if (loading) {
       return <div className="message">Loading...</div>;
-    } else if (!store.talks) {
+    } else if (!talks) {
       return <div className="message">Something is wrong :(</div>;
     }
 
@@ -33,7 +34,7 @@ class App extends Component {
     return (
       <div className="main">
         <div className="talk-container">
-          <Filter active={store.filter} onFilterChange={this.onFilterChange.bind(this)} />
+          <Filter active={filter} onFilterChange={this.onFilterChange.bind(this)} />
           <TalkList
             talks={list}
             selectedTalk={selectedTalk}
@@ -49,4 +50,12 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    loading: state.loading,
+    talks: state.talks,
+    filter: state.filter
+  };
+}
+
+export default connect(mapStateToProps)(App);
