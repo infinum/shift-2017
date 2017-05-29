@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {observer} from 'mobx-react';
+import {action} from 'mobx';
 
 import TalkList from './components/TalkList';
 import Talk from './components/Talk';
@@ -7,17 +8,17 @@ import Filter from './components/Filter';
 
 @observer
 class App extends Component {
-  onTalkClick(talk) {
+  @action onTalkClick(talk) {
     const {store} = this.props;
     store.selectedTalk = talk;
   }
 
-  onFavClick() {
+  @action onFavClick() {
     const {store} = this.props;
     store.selectedTalk.favorite = !store.selectedTalk.favorite;
   }
 
-  onFilterChange(filter) {
+  @action onFilterChange(filter) {
     const {store} = this.props;
     store.filter = filter;
   }

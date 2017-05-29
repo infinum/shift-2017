@@ -1,15 +1,17 @@
+import {action} from 'mobx';
+
 import Talk from '../store/Talk';
 
-export default function loadData(store) {
+export default action(function loadData(store) {
   store.loading = true;
   return fetch('/data.json')
     .then((res) => res.json())
-    .then((data) => {
+    .then(action((data) => {
       store.talks = data.map((talk) => new Talk(talk));
       store.loading = false;
-    })
-    .catch((e) => {
+    }))
+    .catch(action((e) => {
       store.loading = false;
       throw e;
-    });
-}
+    }));
+});
