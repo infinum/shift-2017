@@ -10,9 +10,10 @@ import {Provider} from 'react-redux';
 import rootReducer from './reducer';
 import {loadData} from './actions';
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunk)
+  composeEnhancers(applyMiddleware(thunk))
 );
 
 store.dispatch(loadData());
