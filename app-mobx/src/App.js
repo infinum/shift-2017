@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import {observer} from 'mobx-react';
 
 import TalkList from './components/TalkList';
 import Talk from './components/Talk';
 import Filter from './components/Filter';
 
+@observer
 class App extends Component {
   onTalkClick(talk) {
     const {store} = this.props;
@@ -29,23 +31,19 @@ class App extends Component {
       return <div className="message">Something is wrong :(</div>;
     }
 
-    const list = []; // Filtered talks
-    const favorites = []; // Favorited talks
-    const selectedTalk = null; // Selected talk ovject
-
     return (
       <div className="main">
         <div className="talk-container">
           <Filter active={store.filter} onFilterChange={this.onFilterChange.bind(this)} />
           <TalkList
-            talks={list}
-            selectedTalk={selectedTalk}
-            favorites={favorites}
+            talks={store.list}
+            selectedTalk={store.selectedTalk}
+            favorites={store.favorites}
             onTalkClick={this.onTalkClick.bind(this)}
           />
         </div>
         <div className="talk-details">
-          {selectedTalk ? <Talk talk={selectedTalk} onFavClick={this.onFavClick.bind(this)} /> : 'Select a talk'}
+          {store.selectedTalk ? <Talk talk={store.selectedTalk} onFavClick={this.onFavClick.bind(this)} /> : 'Select a talk'}
         </div>
       </div>
     );

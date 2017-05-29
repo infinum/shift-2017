@@ -1,6 +1,7 @@
 import React from 'react';
+import {observer} from 'mobx-react';
 
-export default ({selectedTalk, talk, onTalkClick}) => (
+export default observer(({selectedTalk, talk, onTalkClick}) => (
   <div
     className={
       `talk-item ${talk.favorite ? 'fav-on' : 'fav-off'} ${selectedTalk === talk ? 'selected' : null}`
@@ -8,7 +9,7 @@ export default ({selectedTalk, talk, onTalkClick}) => (
     onClick={() => onTalkClick(talk)}
   >
     <div>{talk.title}</div>
-    <div>{talk.location}, {talk.time.start}-{talk.time.end}</div>
-    <div>{talk.date}</div>
+    <div>{talk.location}, {talk.displayStart}-{talk.displayEnd}</div>
+    <div>{talk.day}</div>
   </div>
-);
+));

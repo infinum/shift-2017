@@ -1,8 +1,9 @@
 import React from 'react';
+import {observer} from 'mobx-react';
 
 import TalkItem from './TalkItem';
 
-export default ({talks, selectedTalk, favorites, onTalkClick}) => (
+export default observer(({talks, selectedTalk, favorites, onTalkClick}) => (
   <div className="talk-list">
     <ul>
       {
@@ -17,4 +18,4 @@ export default ({talks, selectedTalk, favorites, onTalkClick}) => (
       Favorites: {favorites.length}
     </div>
   </div>
-);
+));
