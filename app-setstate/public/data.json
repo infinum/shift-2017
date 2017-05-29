@@ -1,0 +1,226 @@
+[{
+  "date": "2017-06-01",
+  "time": {
+    "start": 600,
+    "end": 660
+  },
+  "type": "other",
+  "location": "main",
+  "title": "Registration"
+}, {
+  "date": "2017-06-01",
+  "time": {
+    "start": 660,
+    "end": 675
+  },
+  "type": "talk",
+  "location": "main",
+  "title": "Official Opening",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-codeanywhere.png",
+  "speaker": {
+    "name": "Ivan Burazin",
+    "company": "Codeanywhere",
+    "title": "CEO at Codeanywhere",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/ivanburazin.png",
+    "bio": "Ivan is the founder of the Shift Conference. Alongside this he co-founded Codeanywhere, the first cross platform Cloud IDE, which now has over a million users worldwide.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/ivanburazin/",
+      "twitter": "ivanburazin"
+    }
+  }
+}, {
+  "date": "2017-06-01",
+  "time": {
+    "start": 675,
+    "end": 720
+  },
+  "type": "talk",
+  "location": "main",
+  "title": "The Soul in The Machine - Developing for Humans",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-microsoft.png",
+  "speaker": {
+    "name": "Christian Heilmann",
+    "company": "Microsoft",
+    "title": "HTML5/Open Web Evangelist at Microsoft",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/christian.jpg",
+    "bio": "Originally coming from a radio journalism background, he built his first web site around 1997 and spent the following years working on large, international web sites.",
+    "social": {
+      "github": "codepo8",
+      "linkedin": "https://www.linkedin.com/in/christianheilmann/",
+      "twitter": "codepo8"
+    }
+  }
+}, {
+  "date": "2017-06-01",
+  "time": {
+    "start": 600,
+    "end": 660
+  },
+  "type": "other",
+  "location": "area55",
+  "title": "Registration"
+}, {
+  "date": "2017-06-01",
+  "time": {
+    "start": 720,
+    "end": 765
+  },
+  "type": "workshop",
+  "location": "area55",
+  "title": "Why Your IT Project is Likely to Fail",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-appacus.png",
+  "speaker": {
+    "name": "Andrea Grisogono",
+    "company": "Appacus",
+    "title": "Product Manager at Appacus",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/andrea-griso.png",
+    "bio": "Andrea is a product manager with 11 years of experience who is passionate about leading teams that develop amazing apps. Loves free-climbing and extra dark chocolate.",
+    "social": {
+      "github": "scrumolina",
+      "linkedin": "https://www.linkedin.com/in/andrea-grisogono?ppe=1",
+      "twitter": "scrumolina"
+    }
+  }
+}, {
+  "date": "2017-06-01",
+  "time": {
+    "start": 765,
+    "end": 825
+  },
+  "type": "other",
+  "location": "area55",
+  "title": "Lunch"
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 600,
+    "end": 660
+  },
+  "type": "other",
+  "location": "main",
+  "title": "Registration"
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 660,
+    "end": 690
+  },
+  "type": "talk",
+  "location": "main",
+  "title": "Big Data Analytics - How to Deal with Billions of Data Rows",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-reversing-labs.png",
+  "speaker": {
+    "name": "Goran Cvijanović",
+    "company": "ReversingLabs",
+    "title": "Principal Engineer",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/goran-cvijanovic.png",
+    "bio": "With more than 20 years of experience, Goran is a Team Lead for Analytical Platform, designing modern Big Data BI systems for supporting company's core business.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/goranc/?ppe=1"
+    }
+  }
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 690,
+    "end": 735
+  },
+  "type": "talk",
+  "location": "main",
+  "title": "Elasticsearch & Docker - Love or Hate?",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-sematext.png",
+  "speaker": {
+    "name": "Stefan Thies",
+    "company": "Sematext",
+    "title": "DevOps Evangelist at Sematext",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/stefan-thies.png",
+    "bio": "Stefan is passionate about scalable system architectures and he contributes to several Node.js open source projects related to monitoring, logging or distributed systems.",
+    "social": {
+      "github": "megastef",
+      "linkedin": "https://www.linkedin.com/in/stefan-thies-a44a863/",
+      "twitter": "seti321"
+    }
+  }
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 600,
+    "end": 660
+  },
+  "type": "other",
+  "location": "area55",
+  "title": "Registration"
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 690,
+    "end": 735
+  },
+  "type": "workshop",
+  "location": "area55",
+  "title": "Migrating to micro-services based platform in live environments",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-aduro.png",
+  "speaker": {
+    "name": "Robert Raca",
+    "company": "Aduro",
+    "title": "Developer at Aduro",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/robert-raca.png",
+    "bio": "Robert is experienced in system and architectural design. He was one of architects of the migration to micro-services and switch to GOLANG as the main language in Aduro idea.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/robertraca/?ppe=1"
+    }
+  }
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 735,
+    "end": 765
+  },
+  "type": "workshop",
+  "location": "area55",
+  "title": "Advanced Layouts and Block Management",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-netgen.png",
+  "speaker": {
+    "name": "Ivo Lukač",
+    "company": "Netgen",
+    "title": "Web Technologist at NetGen",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/ivo-lukac.png",
+    "bio": "Managing partner at Netgen, more than 12 years of experience in building complex web solutions, spoken at many conferences, organizing Web Summer Camp from 2012.",
+    "social": {
+      "github": "ilukac",
+      "linkedin": "https://www.linkedin.com/in/ivolukac/?ppe=1",
+      "twitter": "ilukac"
+    }
+  }
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 765,
+    "end": 825
+  },
+  "type": "other",
+  "location": "area55",
+  "title": "Lunch"
+}, {
+  "date": "2017-06-02",
+  "time": {
+    "start": 825,
+    "end": 960
+  },
+  "type": "workshop",
+  "location": "area55",
+  "title": "React State Management with Redux and MobX",
+  "logo": "http://shift.codeanywhere.com/assets/img/icons-logo/icon-infinum.png",
+  "speaker": {
+    "name": "Darko Kukovec",
+    "company": "Infinum",
+    "title": "JavaScript Team Lead at Infinum",
+    "photo": "http://shift.codeanywhere.com/assets/img/speakers/darko-kukovec.png",
+    "bio": "Darko Kukovec is a JavaScript Team Lead at Infinum. In his free time, he experiments with node.js, browser extensions, manipulating CSS and everything else JavaScript related.",
+    "social": {
+      "github": "DarkoKukovec",
+      "linkedin": "https://www.linkedin.com/in/darkokukovec/?locale=hr_HR",
+      "twitter": "DarkoKukovec"
+    }
+  }
+}]
