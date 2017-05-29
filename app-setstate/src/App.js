@@ -1,22 +1,66 @@
 import React, {Component} from 'react';
+import update from 'react-addons-update';
 
 import TalkList from './components/TalkList';
 import Talk from './components/Talk';
 import Filter from './components/Filter';
 
 import loadData from './utils/api';
+import {talkId} from './utils/helpers';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: false,
+      talks: null,
+      filter: 'main',
+      selectedTalk: null
+    };
+  }
+
+  componentWillMount() {
+    this.setState({
+      loading: true
+    });
+
+    loadData().then((data) => {
+      this.setState({
+        loading: false,
+        talks: data
+      });
+    }, () => {
+      this.setState({
+        loading: false
+      });
+    });
+  }
+
   onTalkClick(talk) {
-    // TODO
+    this.setState({
+      selectedTalk: talkId(talk)
+    });
   }
 
   onFavClick() {
-    // TODO
+    const selectedTalk = this.state.talks.find((talk) => talkId(talk) === this.state.selectedTalk);
+
+    this.setState({
+      talks: update(this.state.talks, {
+        [this.state.talks.indexOf(selectedTalk)]: {
+          $merge: {
+            favorite: !selectedTalk.favorite
+          }
+        }
+      })
+    });
   }
 
   onFilterChange(filter) {
-    // TODO
+    this.setState({
+      filter: filter
+    });
   }
 
   render() {
