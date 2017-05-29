@@ -70,9 +70,9 @@ class App extends Component {
       return <div className="message">Something is wrong :(</div>;
     }
 
-    const list = []; // Filtered talks
-    const favorites = []; // Favorited talks
-    const selectedTalk = null; // Selected talk ovject
+    const list = this.state.talks.filter((talk) => talk.location === this.state.filter);
+    const favorites = this.state.talks.filter((talk) => talk.favorite);
+    const selectedTalk = this.state.talks.find((talk) => talkId(talk) === this.state.selectedTalk);
 
     return (
       <div className="main">

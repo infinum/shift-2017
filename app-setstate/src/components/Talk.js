@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {formatTime} from '../utils/helpers';
 import Speaker from './Speaker';
 
 export default ({talk, onFavClick}) => (
@@ -13,7 +14,7 @@ export default ({talk, onFavClick}) => (
         Favorite
       </button>
     </div>
-    <h3>{talk.location}, {talk.time.start}-{talk.time.end}</h3>
+    <h3>{talk.location}, {formatTime(talk.time.start)}-{formatTime(talk.time.end)}</h3>
     <div>{talk.date}</div>
     {talk.speaker && <Speaker speaker={talk.speaker} />}
   </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {formatTwitter, formatLinkedin, formatGithub} from '../utils/helpers';
 import Social from './Social';
 
 export default ({speaker}) => (
@@ -9,9 +10,9 @@ export default ({speaker}) => (
     <h3>{speaker.title}, {speaker.company}</h3>
     <div>{speaker.bio}</div>
     <ul className="social-list">
-      <Social name="Twitter" social={speaker.social.twitter} />
-      <Social name="Linkedin" social={speaker.social.linkedin} />
-      <Social name="Github" social={speaker.social.github} />
+      <Social name="Twitter" social={formatTwitter(speaker.social)} />
+      <Social name="Linkedin" social={formatLinkedin(speaker.social)} />
+      <Social name="Github" social={formatGithub(speaker.social)} />
     </ul>
   </div>
 );
