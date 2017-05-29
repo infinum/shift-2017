@@ -4,6 +4,8 @@ import TalkList from './components/TalkList';
 import Talk from './components/Talk';
 import Filter from './components/Filter';
 
+import loadData from './utils/api';
+
 class App extends Component {
   onTalkClick(talk) {
     // TODO
