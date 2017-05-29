@@ -64,11 +64,9 @@ class App extends Component {
   }
 
   render() {
-    const {store} = this.props;
-
-    if (store.loading) {
+    if (this.state.loading) {
       return <div className="message">Loading...</div>;
-    } else if (!store.talks) {
+    } else if (!this.state.talks) {
       return <div className="message">Something is wrong :(</div>;
     }
 
@@ -79,7 +77,7 @@ class App extends Component {
     return (
       <div className="main">
         <div className="talk-container">
-          <Filter active={store.filter} onFilterChange={this.onFilterChange.bind(this)} />
+          <Filter active={this.state.filter} onFilterChange={this.onFilterChange.bind(this)} />
           <TalkList
             talks={list}
             selectedTalk={selectedTalk}
