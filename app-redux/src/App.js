@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+
+import {talkFavToggle, talkSelect, filterChange} from './actions';
+import {talkId} from './utils/helpers';
 
 import TalkList from './components/TalkList';
 import Talk from './components/Talk';
@@ -7,15 +11,15 @@ import Filter from './components/Filter';
 
 class App extends Component {
   onTalkClick(talk) {
-    // TODO
+    this.props.talkSelect(talkId(talk));
   }
 
   onFavClick() {
-    // TODO
+    this.props.talkFavToggle();
   }
 
   onFilterChange(filter) {
-    // TODO
+    this.props.filterChange(filter);
   }
 
   render() {
@@ -58,4 +62,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(App);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    talkFavToggle,
+    talkSelect,
+    filterChange
+  }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
