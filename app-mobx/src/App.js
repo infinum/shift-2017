@@ -6,15 +6,18 @@ import Filter from './components/Filter';
 
 class App extends Component {
   onTalkClick(talk) {
-    // TODO
+    const {store} = this.props;
+    store.selectedTalk = talk;
   }
 
   onFavClick() {
-    // TODO
+    const {store} = this.props;
+    store.selectedTalk.favorite = !store.selectedTalk.favorite;
   }
 
   onFilterChange(filter) {
-    // TODO
+    const {store} = this.props;
+    store.filter = filter;
   }
 
   render() {
